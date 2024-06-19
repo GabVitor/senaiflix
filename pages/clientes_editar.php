@@ -8,15 +8,10 @@ include 'conexao.php';
 	}
 	$linha = $resultado->fetch_assoc();
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset = "UTF-8">
-    </head>
-    <body>
+
         <a href = "index.php?pagina=clientes_listar" target = ""> Voltar </a><br>
         <h3> Editar Cliente </h3>
-        <form action = "pages/clientes_editar_salvar.php" method = "POST">
+        <form action = "pages/clientes_editar_salvar.phpid=<?php echo $linha['id']; ?>" method = "POST">
             <label for ="nome"> Nome do cliente </label><br>
             <input type = "text" name = "nome" required minlength = "3" placeholder = "Digite o nome do cliente" value="<?php echo $linha['nome']; ?>"><br>
 
@@ -75,5 +70,3 @@ include 'conexao.php';
 			<input type='hidden' name='id' value='<?php echo['id']; ?>'>
             <button type = "submit"> Enviar </button>
         </form>
-    </body>
-</html>

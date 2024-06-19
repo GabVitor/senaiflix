@@ -3,17 +3,17 @@
         include 'conexao.php';
         $titulo = $_POST["titulo"];
         $descricao = $_POST["descricao"];
-        $ano_lancamento = date("Y-m-d");
+        $ano_lancamento = $_POST["ano_lancamento"];
         $genero = $_POST["genero"];
         $classificacao = $_POST["classificacao"];
         $data_cadastro = date("Y-m-d H:i:s");
         $data_atualizacao = date("Y-m-d H:i:s");
         $status = 0;
     
-        $sql = "INSERT INTO filmes (titulo, descricao, ano_lancamento, genero, calssificacao, data_cadastro, data_atualizacao, status) 
-        VALUES ('$titulo','$descricao','$ano_lancamento','$genero','$classificacao','$data_cadastro','$data_atualizacao','$status',)";
+        $sql = "INSERT INTO filmes (titulo, descricao, ano_lancamento, genero, classificacao, data_cadastro, data_atualizacao, status) 
+        VALUES ('$titulo','$descricao','$ano_lancamento','$genero','$classificacao','$data_cadastro','$data_atualizacao','$status')";
         if($conn->query($sql) == TRUE){
-            echo "Cadastro de cliente realizado com sucesso";
+            echo "Cadastro de filme realizado com sucesso";
         }else{
             echo "Error". $conn->error;
         }

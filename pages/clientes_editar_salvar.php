@@ -2,7 +2,7 @@
     include '../conexao.php';
 
     if(!isset($_POST['id'])){
-        echo "Usuário Inválido".     $conn->error;
+        echo "Usuário Inválido". $conn->error;
         exit();
     }
     $id = $_POST['id'];

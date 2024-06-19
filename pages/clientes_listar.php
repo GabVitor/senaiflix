@@ -35,8 +35,8 @@
             <td>".$linha['cep']."</td>
             <td>".$linha['email']."</td>
             <td>".$linha['telefone']."</td>
-            <td><a href = 'index.php?pagina=clientes_editar&id=".$linha['id']."'>editar</a></td>
-            <td><a href = 'index.php?pagina=clientes_remover&id=".$linha['id']."'>remover</a></td>
+            <td><a href = 'pages/clientes_editar&id=".$linha['id']."'>editar</a></td>
+            <td><a href = 'pages/clientes_remover&id=".$linha['id']."'>remover</a></td>
             </tr>";
     }
 ?>

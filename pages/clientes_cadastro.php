@@ -1,9 +1,3 @@
-
-<html>
-    <head>
-        <meta charset = "UTF-8">
-    </head>
-    <body>
 		<a href = "index.php?pagina=clientes_listar"> Lista de clientes </a>
         <form action = "index.php?pagina=clientes_cadastro_salvar" method = "POST">
             <label for ="nome"> Nome do cliente </label><br>
@@ -63,5 +57,3 @@
 			
             <button type = "submit"> Enviar </button>
         </form>
-    </body>
-</html>

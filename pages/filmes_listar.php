@@ -8,31 +8,27 @@
 <a href = "index.php?pagina=filmes_cadastro"> Cadastrar filme </a>
 <table border = '1' widht = "50%">
     <tr>
-    <th>id</th>
-    <th>título</th>	
-    <th>descrição</th>	
-    <th>ano lançamento</th>	
-    <th>gênero</th>	
-    <th>classificação</th>	
-    <th>editar</th>
-    <th>remover</th>
+    <th>ID</th>
+    <th>Título</th>	
+    <th>Descrição</th>	
+    <th>Ano lançamento</th>	
+    <th>Gênero</th>	
+    <th>Classificação</th>	
+    <th>Editar</th>
+    <th>Remover</th>
     </tr>
 
 <?php
     while($linha = $resultado->fetch_assoc()){
         echo"<tr>
             <td>".$linha['id']."</td>
-            <td>".$linha['nome']."</td>
-            <td>".$linha['cpf']."</td>
-            <td>".$linha['endereco']."</td>
-            <td>".$linha['bairro']."</td>
-            <td>".$linha['cidade']."</td>
-            <td>".$linha['estado']."</td>
-            <td>".$linha['cep']."</td>
-            <td>".$linha['email']."</td>
-            <td>".$linha['telefone']."</td>
-            <td><a href = 'index.php?pagina=filmes_editar&id=".$linha['id']."'>editar</a></td>
-            <td><a href = 'index.php?pagina=filmes_remover&id=".$linha['id']."'>remover</a></td>
+            <td>".$linha['titulo']."</td>
+            <td>".$linha['descricao']."</td>
+            <td>".$linha['ano_lancamento']."</td>
+            <td>".$linha['genero']."</td>
+            <td>".$linha['classificacao']."</td>
+            <td><a href = 'pages/filmes_editar?id=".$linha['id']."'>editar</a></td>
+            <td><a href = 'pages/filmes_remover?id=".$linha['id']."'>remover</a></td>
             </tr>";
     }
 ?>
